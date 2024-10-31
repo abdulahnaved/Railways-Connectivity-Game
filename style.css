@@ -1,0 +1,209 @@
+/* Import the Lobster font */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+/* Reset some basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and container styles */
+body, .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f7f6ec;
+    color: #333;
+}
+
+.container {
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Title styling */
+.title {
+    font-size: 48px;
+    font-family: 'Lobster', cursive;
+    color: #c5a253;
+    margin-bottom: 20px;
+}
+
+/* Input field */
+.name-input {
+    padding: 10px;
+    width: 250px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+}
+
+/* Difficulty section */
+.difficulty {
+    margin-bottom: 20px;
+}
+
+.difficulty-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.difficulty-btn {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 18px;
+    border: 1px solid #c5a253;
+    background-color: #f1f0e2;
+    color: #333;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+}
+
+.difficulty-btn:hover, .difficulty-btn.active {
+    background-color: #c5a253;
+    color: #fff;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    gap: 10px;
+}
+
+/* Set "Rules" and "Start Game" buttons to match title color */
+.rules-btn, .start-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    background-color: #c5a253; /* Match the title color */
+    color: #fff;
+}
+
+.rules-btn:hover, .start-btn:hover {
+    background-color: #a68640; /* Slightly darker shade on hover */
+}
+
+/* Rules page */
+.rules-list {
+    list-style-type: disc;
+    margin: 20px 0;
+    padding-left: 20px;
+    text-align: left;
+    max-width: 300px;
+}
+
+.back-btn {
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #c5a253;
+    color: #fff;
+}
+
+.back-btn:hover {
+    background-color: #a68640;
+}
+
+/* Hidden class to toggle visibility */
+.hidden {
+    display: none;
+}
+
+/* Warning message styling */
+#warningMessage {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.board {
+    display: table;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+.board-cell {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ccc;
+    padding: 0; 
+    margin: 0;  
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.board-cell img {
+    width: 100%;
+    height: 100%;
+    display: block; 
+    object-fit: cover; /* Ensures the image fully fits within the cell */
+    transform-origin: center; /* Rotates from the center */
+    transition: transform 0.3s; /* Smooth rotation */
+}
+
+#gameBoard {
+    border: 2px solid black;   
+    width: 50%; 
+}
+
+.board-cell {
+    height: 80px;  
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+}
+
+.board-cell img {
+    max-width: auto; 
+    max-height: auto;
+    display: block;
+}
+
+#gamearea {
+    background-color: rgb(255, 255, 255);
+    width: 1000px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 50px;
+    display: flex;
+}
+
+#palettes {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    border: 1px solid black;
+    margin: auto;
+    border-radius: 50px;
+}
+
+/* Styles for images in the palettes */
+#imgs img {
+    width: 100px; 
+    border-radius: 10px; /* Rounded corners */
+    height: auto;  
+    transition: transform 0.3s, opacity 0.3s; /* Smooth transition */
+}
+
+/* Hover effects for images */
+#imgs img:hover {
+    transform: scale(1.1); /* Scale up on hover */
+    opacity: 0.8; /* Reduce opacity on hover */
+}
+
+.selected {
+    border: 2px solid #c5a253; /* Highlight selected tile */
+}
